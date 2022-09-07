@@ -1,21 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <!-- Style -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Font awesome -->
+  <link rel="stylesheet" 
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
   <title>Frontend Mentor | QR code component</title>
 </head>
+
 <body>
-
-  Improve your front-end skills by building projects
-
-  Scan the QR code to visit Frontend Mentor and take your coding skills to the next level
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  <!-- Main start -->
+  <main>
+    <h1 class="hover">Hover !</h1>
+    <!-- Card container -->
+    <div class="card">
+      <!-- Card Front -->
+      <article class="card__content">
+        <div class="card__front">
+          <i class="fa fa-question card__front__questionMark" aria-hidden="true"></i>
+        </div>
+        <!-- Card Back -->
+        <figure class="card__back">
+          <div class="card__back__image"></div>
+          <figcaption class="card__back__text">
+            <h2 class="card__back__text__header">Improve your front-end skills by Building projects</h2>
+            <p class="card__back_text_desc">Scan the QR code to visit <strong> Frontend Mentor </strong> and take your coding skills to the next
+              level!</p>
+          </figcaption>
+        </figure>
+      </article>
+    </div>
+  </main>
+  <!-- Main end -->
 </body>
+
 </html>

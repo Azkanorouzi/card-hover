@@ -1,0 +1,119 @@
+
+/* Reset */
+*, *:after, *:before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+/* Selection */
+::selection {
+  background: darkblue;
+  color: #c2231f;
+}
+/* Main */
+main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient( hsl(201, 100%, 20%),#003,#001);
+  font-family: 'Outfit', sans-serif;
+  gap: 2.5rem;
+  text-align: center;
+}
+/* Card container */
+.card {
+  width: 330px;
+  height: 490px;
+}
+/* This element contains all elements of the card */
+.card__content {
+  height: 100%;
+  width: 100%; 
+  position: relative;
+  /* Animations */
+  transition: transform 2s;
+  transform-style: preserve-3d;
+}
+/* Cards general */
+.card__back, .card__front {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  transform-style: preserve-3d;
+  border-radius: 2rem;
+}
+/* hiding the back part of the card */
+.card__back {
+  background: linear-gradient(hsl(245, 100%, 10%),hsl(245, 100%, 20%),#4433ff);
+  padding: 1rem;
+}
+/* Card back image */
+.card__back__image {
+    height: 300px;
+    width:100%;
+    background:url("images/image-qr-code.png") center,#780000;
+    background-blend-mode: hard-light;
+    background-size: cover;
+    border-radius: 2rem;
+    opacity: .8;
+    margin-bottom: 20px;
+}
+/* Card back text */
+  .card__back__text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-size: 15px;
+  color: #dddd;
+} 
+/* Increasing size of the card */
+.card__front {
+  color: #c2231f;
+  font-size: 5rem;
+  display: grid;
+  place-content: center;
+  padding:20px;
+}
+.hover{
+  display: none;
+}
+/* media queries */
+@media (hover:hover) {
+.hover {
+  display: block;
+  background: linear-gradient(to right,#641220, #b32e35, #da1e37,#780000);
+  background-size: 600%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  top: 140px;
+  font-size: 4rem;
+  animation: gradientRedMove 4s infinite linear;
+  text-shadow: 2px 2px 2px #4433ff;
+  pointer-events: none;
+}
+.card__back{
+    transform: rotateY(.5turn) rotateZ(.5turn);
+}
+.card:hover .card__content{
+  transform: rotateY(.5turn) rotateZ(.5turn) rotateX(1turn);
+}
+/* Hover text animation */
+@keyframes gradientRedMove{
+  to {
+    background-position: 600%;
+  }
+}
+i, .card__back__text,.card__back__image{
+  transform: translateZ(200px);
+}
+.card__back__image{
+  opacity: .5;
+}
+}
